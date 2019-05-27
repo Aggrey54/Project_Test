@@ -21,6 +21,10 @@ public class Prisoner extends StandardEntity {
     protected String name;
 
     @NotNull
+    @Column(name = "GENDER", nullable = false)
+    protected String gender;
+
+    @NotNull
     @Column(name = "ID_NUMBER", nullable = false, unique = true)
     protected Integer idNumber;
 
@@ -28,6 +32,15 @@ public class Prisoner extends StandardEntity {
     @NotNull
     @Column(name = "DATE_OF_BIRTH", nullable = false)
     protected Date dateOfBirth;
+
+    public void setGender(Gender gender) {
+        this.gender = gender == null ? null : gender.getId();
+    }
+
+    public Gender getGender() {
+        return gender == null ? null : Gender.fromId(gender);
+    }
+
 
     public void setName(String name) {
         this.name = name;
