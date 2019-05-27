@@ -1,4 +1,3 @@
--- begin PROJECTTEST_PRISONER
 create table PROJECTTEST_PRISONER (
     ID varchar(36) not null,
     VERSION integer not null,
@@ -15,5 +14,4 @@ create table PROJECTTEST_PRISONER (
     DATE_OF_BIRTH date not null,
     --
     primary key (ID)
-)^
--- end PROJECTTEST_PRISONER
+);

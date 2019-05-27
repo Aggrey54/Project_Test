@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <screen id="projecttest$Prisoner.browse"
+            template="com/company/projecttest/web/prisoner/prisoner-browse.xml"/>
+    <screen id="projecttest$Prisoner.edit"
+            template="com/company/projecttest/web/prisoner/prisoner-edit.xml"/>
 </screen-config>
