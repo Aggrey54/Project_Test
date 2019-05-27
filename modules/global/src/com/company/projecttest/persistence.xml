@@ -3,6 +3,6 @@
              version="2.0">
     <persistence-unit name="Project_Test"
                       transaction-type="RESOURCE_LOCAL">
-        <class>com.company.projecttest.entity.Prisoner_ID</class>
+        <class>com.company.projecttest.entity.Prisoner</class>
     </persistence-unit>
 </persistence>
