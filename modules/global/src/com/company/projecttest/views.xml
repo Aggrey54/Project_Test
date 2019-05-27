@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+    <view class="com.company.projecttest.entity.Prisoner_ID"
+          extends="_local"
+          name="prisoner_ID-view"/>
+</views>

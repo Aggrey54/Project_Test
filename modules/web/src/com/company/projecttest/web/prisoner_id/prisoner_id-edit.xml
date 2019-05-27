@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.projecttest.web.prisoner_id.Prisoner_IDEdit"
+        datasource="prisoner_IDDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.projecttest.web.prisoner_id">
+    <dsContext>
+        <datasource id="prisoner_IDDs"
+                    class="com.company.projecttest.entity.Prisoner_ID"
+                    view="prisoner_ID-view"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="prisoner_IDDs">
+            <column width="250px">
+                <field property="prisonerID"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
