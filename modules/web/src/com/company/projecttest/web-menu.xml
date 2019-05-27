@@ -3,5 +3,6 @@
     <menu id="application-projecttest"
           insertBefore="administration">
         <item screen="projecttest$Prisoner.browse"/>
+        <item screen="projecttest$Cells.browse"/>
     </menu>
 </menu-config>

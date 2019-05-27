@@ -4,4 +4,8 @@
             template="com/company/projecttest/web/prisoner/prisoner-browse.xml"/>
     <screen id="projecttest$Prisoner.edit"
             template="com/company/projecttest/web/prisoner/prisoner-edit.xml"/>
+    <screen id="projecttest$Cells.browse"
+            template="com/company/projecttest/web/cells/cells-browse.xml"/>
+    <screen id="projecttest$Cells.edit"
+            template="com/company/projecttest/web/cells/cells-edit.xml"/>
 </screen-config>
