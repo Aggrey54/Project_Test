@@ -32,6 +32,7 @@
             </actions>
             <columns>
                 <column id="cellNumber"/>
+                <column id="cellBlock"/>
                 <column id="cellCapacity"/>
             </columns>
             <rows datasource="cellsesDs"/>

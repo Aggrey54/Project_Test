@@ -1,3 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+    <view class="com.company.projecttest.entity.Prisoner"
+          extends="_local"
+          name="prisoner-view">
+        <property name="cell"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.projecttest.entity.Cells"
+          extends="_local"
+          name="cells-view">
+        <property name="prisoners"
+                  view="_minimal">
+            <property name="gender"/>
+            <property name="idNumber"/>
+            <property name="dateOfBirth"/>
+        </property>
+    </view>
 </views>

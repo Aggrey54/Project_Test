@@ -8,7 +8,10 @@
     <dsContext>
         <datasource id="cellsDs"
                     class="com.company.projecttest.entity.Cells"
-                    view="_local"/>
+                    view="cells-view">
+            <collectionDatasource id="prisonersDs"
+                                  property="prisoners"/>
+        </datasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
@@ -18,9 +21,21 @@
                     datasource="cellsDs">
             <column width="250px">
                 <field property="cellNumber"/>
+                <field property="cellBlock"/>
                 <field property="cellCapacity"/>
             </column>
         </fieldGroup>
+        <table height="100px"
+               width="100%">
+            <columns>
+                <column id="name"/>
+                <column id="gender"/>
+                <column id="idNumber"
+                        caption="ID Number"/>
+                <column id="dateOfBirth"/>
+            </columns>
+            <rows datasource="prisonersDs"/>
+        </table>
         <frame id="windowActions"
                screen="editWindowActions"/>
     </layout>

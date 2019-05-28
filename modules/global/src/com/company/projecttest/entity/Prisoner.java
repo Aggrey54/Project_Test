@@ -9,6 +9,9 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @NamePattern("%s|name")
 @Table(name = "PROJECTTEST_PRISONER")
@@ -19,6 +22,10 @@ public class Prisoner extends StandardEntity {
     @NotNull
     @Column(name = "NAME", nullable = false)
     protected String name;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CELL_ID")
+    protected Cells cell;
 
     @NotNull
     @Column(name = "GENDER", nullable = false)
@@ -32,6 +39,15 @@ public class Prisoner extends StandardEntity {
     @NotNull
     @Column(name = "DATE_OF_BIRTH", nullable = false)
     protected Date dateOfBirth;
+
+    public void setCell(Cells cell) {
+        this.cell = cell;
+    }
+
+    public Cells getCell() {
+        return cell;
+    }
+
 
     public void setGender(Gender gender) {
         this.gender = gender == null ? null : gender.getId();

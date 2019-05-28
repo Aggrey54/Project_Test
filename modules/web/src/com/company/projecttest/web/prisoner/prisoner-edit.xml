@@ -8,7 +8,7 @@
     <dsContext>
         <datasource id="prisonerDs"
                     class="com.company.projecttest.entity.Prisoner"
-                    view="_local"/>
+                    view="prisoner-view"/>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
@@ -22,6 +22,7 @@
                 <field caption="ID Number"
                        property="idNumber"/>
                 <field property="dateOfBirth"/>
+                <field property="cell"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"
