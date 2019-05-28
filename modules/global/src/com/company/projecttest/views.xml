@@ -16,4 +16,7 @@
             <property name="dateOfBirth"/>
         </property>
     </view>
+    <view class="com.company.projecttest.entity.Warden"
+          extends="_local"
+          name="warden-view"/>
 </views>

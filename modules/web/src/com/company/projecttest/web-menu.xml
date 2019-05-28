@@ -4,6 +4,7 @@
           insertBefore="administration">
         <item screen="projecttest$Prisoner.browse"/>
         <item screen="projecttest$Cells.browse"/>
+        <item screen="projecttest$Warden.browse"/>
         <item screen="projecttest$Prisonerproperty.browse"/>
     </menu>
 </menu-config>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.projecttest.web.warden.WardenEdit"
+        datasource="wardenDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.projecttest.web.warden">
+    <dsContext>
+        <datasource id="wardenDs"
+                    class="com.company.projecttest.entity.Warden"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="wardenDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="rank"/>
+                <field property="serviceNumber"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
