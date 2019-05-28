@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.projecttest.web.warden.WardenBrowse"
+        focusComponent="wardensTable"
+        lookupComponent="wardensTable"
+        messagesPack="com.company.projecttest.web.warden">
+    <dsContext>
+        <groupDatasource id="wardensDs"
+                         class="com.company.projecttest.entity.Warden"
+                         view="_local">
+            <query>
+                <![CDATA[select e from projecttest$Warden e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="wardensTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="wardensTable"
+                datasource="wardensDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="wardensTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="rank"/>
+                <column id="serviceNumber"/>
+            </columns>
+            <rows datasource="wardensDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="wardensTable.create"/>
+                <button id="editBtn"
+                        action="wardensTable.edit"/>
+                <button id="removeBtn"
+                        action="wardensTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

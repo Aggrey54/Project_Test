@@ -8,4 +8,8 @@
             template="com/company/projecttest/web/cells/cells-browse.xml"/>
     <screen id="projecttest$Cells.edit"
             template="com/company/projecttest/web/cells/cells-edit.xml"/>
+    <screen id="projecttest$Warden.browse"
+            template="com/company/projecttest/web/warden/warden-browse.xml"/>
+    <screen id="projecttest$Warden.edit"
+            template="com/company/projecttest/web/warden/warden-edit.xml"/>
 </screen-config>
