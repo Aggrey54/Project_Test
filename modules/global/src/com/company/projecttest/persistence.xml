@@ -7,5 +7,6 @@
         <class>com.company.projecttest.entity.Cells</class>
         <class>com.company.projecttest.entity.Warden</class>
         <class>com.company.projecttest.entity.Prisonerproperty</class>
+        <class>com.company.projecttest.entity.NextofKin</class>
     </persistence-unit>
 </persistence>

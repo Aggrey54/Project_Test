@@ -16,4 +16,8 @@
             template="com/company/projecttest/web/prisonerproperty/prisonerproperty-browse.xml"/>
     <screen id="projecttest$Prisonerproperty.edit"
             template="com/company/projecttest/web/prisonerproperty/prisonerproperty-edit.xml"/>
+    <screen id="projecttest$NextofKin.browse"
+            template="com/company/projecttest/web/nextofkin/nextof-kin-browse.xml"/>
+    <screen id="projecttest$NextofKin.edit"
+            template="com/company/projecttest/web/nextofkin/nextof-kin-edit.xml"/>
 </screen-config>

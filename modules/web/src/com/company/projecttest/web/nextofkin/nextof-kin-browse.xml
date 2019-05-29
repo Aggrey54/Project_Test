@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://browseCaption"
-        class="com.company.projecttest.web.prisoner.PrisonerBrowse"
-        focusComponent="prisonersTable"
-        lookupComponent="prisonersTable"
-        messagesPack="com.company.projecttest.web.prisoner">
+        class="com.company.projecttest.web.nextofkin.NextofKinBrowse"
+        focusComponent="nextofKinsTable"
+        lookupComponent="nextofKinsTable"
+        messagesPack="com.company.projecttest.web.nextofkin">
     <dsContext>
-        <groupDatasource id="prisonersDs"
-                         class="com.company.projecttest.entity.Prisoner"
-                         view="prisoner-view">
+        <groupDatasource id="nextofKinsDs"
+                         class="com.company.projecttest.entity.NextofKin"
+                         view="_local">
             <query>
-                <![CDATA[select e from projecttest$Prisoner e]]>
+                <![CDATA[select e from projecttest$NextofKin e]]>
             </query>
         </groupDatasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="prisonersTable"
+    <layout expand="nextofKinsTable"
             spacing="true">
         <filter id="filter"
-                applyTo="prisonersTable"
-                datasource="prisonersDs">
+                applyTo="nextofKinsTable"
+                datasource="nextofKinsDs">
             <properties include=".*"/>
         </filter>
-        <groupTable id="prisonersTable"
+        <groupTable id="nextofKinsTable"
                     width="100%">
             <actions>
                 <action id="create"/>
@@ -32,21 +32,21 @@
             </actions>
             <columns>
                 <column id="name"/>
-                <column id="gender"/>
                 <column id="idNumber"/>
-                <column id="dateOfBirth"/>
-                <column id="cell"/>
+                <column id="relationship"/>
+                <column id="phoneNumber"/>
+                <column id="physicalAddress"/>
             </columns>
-            <rows datasource="prisonersDs"/>
+            <rows datasource="nextofKinsDs"/>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn"
-                        action="prisonersTable.create"/>
+                        action="nextofKinsTable.create"/>
                 <button id="editBtn"
-                        action="prisonersTable.edit"/>
+                        action="nextofKinsTable.edit"/>
                 <button id="removeBtn"
-                        action="prisonersTable.remove"/>
+                        action="nextofKinsTable.remove"/>
             </buttonsPanel>
         </groupTable>
     </layout>

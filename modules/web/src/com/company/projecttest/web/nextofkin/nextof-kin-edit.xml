@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editorCaption"
-        class="com.company.projecttest.web.warden.WardenEdit"
-        datasource="wardenDs"
+        class="com.company.projecttest.web.nextofkin.NextofKinEdit"
+        datasource="nextofKinDs"
         focusComponent="fieldGroup"
-        messagesPack="com.company.projecttest.web.warden">
+        messagesPack="com.company.projecttest.web.nextofkin">
     <dsContext>
-        <datasource id="wardenDs"
-                    class="com.company.projecttest.entity.Warden"
-                    view="warden-view"/>
+        <datasource id="nextofKinDs"
+                    class="com.company.projecttest.entity.NextofKin"
+                    view="_local"/>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
     <layout expand="windowActions"
             spacing="true">
         <fieldGroup id="fieldGroup"
-                    datasource="wardenDs">
+                    datasource="nextofKinDs">
             <column width="250px">
                 <field property="name"/>
-                <field property="rank"/>
-                <field property="serviceNumber"/>
+                <field property="idNumber"/>
+                <field property="relationship"/>
+                <field property="phoneNumber"/>
+                <field property="physicalAddress"
+                       rows="5"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

@@ -1,0 +1,3 @@
+alter table PROJECTTEST_CELLS alter column WARDEN_ID rename to WARDEN_ID__U31876 ^
+drop index IDX_PROJECTTEST_CELLS_ON_WARDEN ;
+alter table PROJECTTEST_CELLS drop constraint FK_PROJECTTEST_CELLS_ON_WARDEN ;

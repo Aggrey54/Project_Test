@@ -1,0 +1,1 @@
+alter table PROJECTTEST_PRISONER add constraint FK_PROJECTTEST_PRISONER_ON_CELL foreign key (CELL_ID) references PROJECTTEST_BLOCK(ID);

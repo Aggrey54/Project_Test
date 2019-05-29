@@ -19,8 +19,7 @@
             <column width="250px">
                 <field property="name"/>
                 <field property="gender"/>
-                <field caption="ID Number"
-                       property="idNumber"/>
+                <field property="idNumber"/>
                 <field property="dateOfBirth"/>
                 <field property="cell"/>
             </column>

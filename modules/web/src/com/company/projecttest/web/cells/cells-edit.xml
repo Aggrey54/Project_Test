@@ -25,17 +25,30 @@
                 <field property="cellCapacity"/>
             </column>
         </fieldGroup>
-        <table height="100px"
-               width="100%">
-            <columns>
-                <column id="name"/>
-                <column id="gender"/>
-                <column id="idNumber"
-                        caption="ID Number"/>
-                <column id="dateOfBirth"/>
-            </columns>
-            <rows datasource="prisonersDs"/>
-        </table>
+        <groupBox id="prisonersBox"
+                  caption="msg://com.company.projecttest.entity/Cells.prisoners">
+            <table id="prisonersTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="create"/>
+                    <action id="edit"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="name"/>
+                    <column id="gender"/>
+                    <column id="idNumber"/>
+                    <column id="dateOfBirth"/>
+                </columns>
+                <rows datasource="prisonersDs"/>
+                <buttonsPanel>
+                    <button action="prisonersTable.create"/>
+                    <button action="prisonersTable.edit"/>
+                    <button action="prisonersTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
         <frame id="windowActions"
                screen="editWindowActions"/>
     </layout>

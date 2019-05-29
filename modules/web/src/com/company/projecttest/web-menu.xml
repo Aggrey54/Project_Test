@@ -6,5 +6,6 @@
         <item screen="projecttest$Cells.browse"/>
         <item screen="projecttest$Warden.browse"/>
         <item screen="projecttest$Prisonerproperty.browse"/>
+        <item screen="projecttest$NextofKin.browse"/>
     </menu>
 </menu-config>

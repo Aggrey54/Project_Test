@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
+import java.util.List;
+import javax.persistence.OneToMany;
 
 @NamePattern("%s|name")
 @Table(name = "PROJECTTEST_WARDEN")
@@ -24,6 +26,9 @@ public class Warden extends StandardEntity {
     @NotNull
     @Column(name = "SERVICE_NUMBER", nullable = false)
     protected String serviceNumber;
+
+
+
 
     public void setRank(WardenRank rank) {
         this.rank = rank == null ? null : rank.getId();

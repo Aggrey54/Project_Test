@@ -18,5 +18,9 @@
     </view>
     <view class="com.company.projecttest.entity.Warden"
           extends="_local"
-          name="warden-view"/>
+          name="warden-view">
+    </view>
+    <view class="com.company.projecttest.entity.NextofKin"
+          extends="_local"
+          name="nextofKin-view"/>
 </views>

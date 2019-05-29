@@ -11,6 +11,9 @@ import com.haulmont.cuba.core.entity.annotation.OnDelete;
 import com.haulmont.cuba.core.global.DeletePolicy;
 import java.util.List;
 import javax.persistence.OneToMany;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @NamePattern("%s|cellNumber")
 @Table(name = "PROJECTTEST_CELLS")
@@ -34,6 +37,7 @@ public class Cells extends StandardEntity {
     @NotNull
     @Column(name = "CELL_CAPACITY", nullable = false)
     protected Integer cellCapacity;
+
 
     public void setPrisoners(List<Prisoner> prisoners) {
         this.prisoners = prisoners;

@@ -23,10 +23,6 @@ public class Prisoner extends StandardEntity {
     @Column(name = "NAME", nullable = false)
     protected String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "CELL_ID")
-    protected Cells cell;
-
     @NotNull
     @Column(name = "GENDER", nullable = false)
     protected String gender;
@@ -40,13 +36,19 @@ public class Prisoner extends StandardEntity {
     @Column(name = "DATE_OF_BIRTH", nullable = false)
     protected Date dateOfBirth;
 
-    public void setCell(Cells cell) {
-        this.cell = cell;
-    }
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CELL_ID")
+    protected Cells cell;
 
     public Cells getCell() {
         return cell;
     }
+
+    public void setCell(Cells cell) {
+        this.cell = cell;
+    }
+
+
 
 
     public void setGender(Gender gender) {

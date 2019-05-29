@@ -8,7 +8,7 @@
     <dsContext>
         <groupDatasource id="wardensDs"
                          class="com.company.projecttest.entity.Warden"
-                         view="_local">
+                         view="warden-view">
             <query>
                 <![CDATA[select e from projecttest$Warden e]]>
             </query>
