@@ -1,0 +1,1 @@
+alter table PROJECTTEST_PRISONER drop column PRISONERPROPERTY_ID__U57761 cascade ;

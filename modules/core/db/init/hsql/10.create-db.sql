@@ -66,7 +66,9 @@ create table PROJECTTEST_PRISONERPROPERTY (
     DELETED_BY varchar(50),
     --
     PROPERTYNAME varchar(255) not null,
+    DESCRIPTION longvarchar,
     SERIALNUMBER varchar(255),
+    PRISONER_ID varchar(36),
     --
     primary key (ID)
 )^

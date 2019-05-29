@@ -8,7 +8,14 @@
     <dsContext>
         <datasource id="prisonerpropertyDs"
                     class="com.company.projecttest.entity.Prisonerproperty"
-                    view="_local"/>
+                    view="prisonerproperty-view"/>
+        <collectionDatasource id="prisonersDs"
+                              class="com.company.projecttest.entity.Prisoner"
+                              view="prisoner-view_1">
+            <query>
+                <![CDATA[select e from projecttest$Prisoner e]]>
+            </query>
+        </collectionDatasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
@@ -19,6 +26,10 @@
             <column width="250px">
                 <field property="propertyname"/>
                 <field property="serialnumber"/>
+                <field property="prisoner"/>
+                <field cols="10"
+                       property="description"
+                       rows="5"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

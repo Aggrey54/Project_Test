@@ -16,4 +16,22 @@
             <property name="dateOfBirth"/>
         </property>
     </view>
+    <view class="com.company.projecttest.entity.Prisonerproperty"
+          extends="_local"
+          name="prisonerproperty-view">
+        <property name="prisoner"
+                  view="_minimal">
+            <property name="cell"
+                      view="_minimal"/>
+            <property name="idNumber"/>
+        </property>
+    </view>
+    <view class="com.company.projecttest.entity.Prisoner"
+          extends="_local"
+          name="prisoner-view_1">
+        <property name="prisonerProperty"
+                  view="_minimal">
+            <property name="serialnumber"/>
+        </property>
+    </view>
 </views>

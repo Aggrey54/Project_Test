@@ -8,7 +8,10 @@
     <dsContext>
         <datasource id="prisonerDs"
                     class="com.company.projecttest.entity.Prisoner"
-                    view="prisoner-view"/>
+                    view="prisoner-view_1">
+            <collectionDatasource id="prisonerPropertyDs"
+                                  property="prisonerProperty"/>
+        </datasource>
     </dsContext>
     <dialogMode height="600"
                 width="800"/>
@@ -19,12 +22,32 @@
             <column width="250px">
                 <field property="name"/>
                 <field property="gender"/>
-                <field caption="ID Number"
-                       property="idNumber"/>
+                <field property="idNumber"/>
                 <field property="dateOfBirth"/>
-                <field property="cell"/>
             </column>
         </fieldGroup>
+        <groupBox id="prisonerPropertyBox"
+                  caption="msg://com.company.projecttest.entity/Prisoner.prisonerProperty">
+            <table id="prisonerPropertyTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="create"/>
+                    <action id="edit"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="propertyname"/>
+                    <column id="serialnumber"/>
+                </columns>
+                <rows datasource="prisonerPropertyDs"/>
+                <buttonsPanel>
+                    <button action="prisonerPropertyTable.create"/>
+                    <button action="prisonerPropertyTable.edit"/>
+                    <button action="prisonerPropertyTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
         <frame id="windowActions"
                screen="editWindowActions"/>
     </layout>

@@ -8,7 +8,7 @@
     <dsContext>
         <groupDatasource id="prisonersDs"
                          class="com.company.projecttest.entity.Prisoner"
-                         view="prisoner-view">
+                         view="prisoner-view_1">
             <query>
                 <![CDATA[select e from projecttest$Prisoner e]]>
             </query>
@@ -32,10 +32,9 @@
             </actions>
             <columns>
                 <column id="name"/>
-                <column id="idNumber"
-                        caption="ID Number"/>
                 <column id="gender"/>
-                <column id="cell"/>
+                <column id="idNumber"/>
+                <column id="dateOfBirth"/>
             </columns>
             <rows datasource="prisonersDs"/>
             <rowsCount/>

@@ -12,6 +12,12 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import java.util.List;
+import javax.persistence.OneToMany;
+import com.haulmont.cuba.core.entity.annotation.OnDelete;
+import com.haulmont.cuba.core.global.DeletePolicy;
+import com.haulmont.chile.core.annotations.Composition;
 
 @NamePattern("%s|name")
 @Table(name = "PROJECTTEST_PRISONER")
@@ -39,6 +45,22 @@ public class Prisoner extends StandardEntity {
     @NotNull
     @Column(name = "DATE_OF_BIRTH", nullable = false)
     protected Date dateOfBirth;
+
+
+
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "prisoner")
+    protected List<Prisonerproperty> prisonerProperty;
+
+    public void setPrisonerProperty(List<Prisonerproperty> prisonerProperty) {
+        this.prisonerProperty = prisonerProperty;
+    }
+
+    public List<Prisonerproperty> getPrisonerProperty() {
+        return prisonerProperty;
+    }
+
 
     public void setCell(Cells cell) {
         this.cell = cell;
